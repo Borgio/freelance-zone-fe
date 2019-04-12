@@ -16,7 +16,7 @@
                     #customer='ngModel'
                     [(ngModel)]="proposal.customer"
             >
-            <div [hidden]="customer.valid || customer.pristine">
+            <div class="alert alert-danger" [hidden]="customer.valid || customer.pristine">
               Customer name is required
             </div>
           </div>
@@ -31,7 +31,7 @@
                     #portfolio_url='ngModel'
                     [(ngModel)]="proposal.portfolio_url"
             >
-            <div [hidden]="portfolio_url.valid || portfolio_url.pristine">
+            <div class="alert alert-danger" [hidden]="portfolio_url.valid || portfolio_url.pristine">
               A portfolio URL is required
             </div>
           </div>
@@ -47,7 +47,7 @@
                     #tools='ngModel'
                     [(ngModel)]="proposal.tools"
             >
-            <div [hidden]="tools.valid || tools.pristine">
+            <div class="alert alert-danger" [hidden]="tools.valid || tools.pristine">
               A list of tools is required
             </div>
           </div>
@@ -63,7 +63,7 @@
                     #estimated_hours='ngModel'
                     [(ngModel)]="proposal.estimated_hours"
             >
-            <div [hidden]="estimated_hours.valid || estimated_hours.pristine">
+            <div class="alert alert-danger" [hidden]="estimated_hours.valid || estimated_hours.pristine">
               An estimation of total hours is required
             </div>
           </div>
@@ -78,7 +78,7 @@
                     #hourly_rate='ngModel'
                     [(ngModel)]="proposal.hourly_rate"
             >
-            <div [hidden]="hourly_rate.valid || hourly_rate.pristine">
+            <div class="alert alert-danger" [hidden]="hourly_rate.valid || hourly_rate.pristine">
               Your hourly rate is required
             </div>
           </div>
@@ -93,7 +93,7 @@
                     #weeks_to_complete='ngModel'
                     [(ngModel)]="proposal.weeks_to_complete"
             >
-            <div [hidden]="weeks_to_complete.valid || weeks_to_complete.pristine">
+            <div class="alert alert-danger" [hidden]="weeks_to_complete.valid || weeks_to_complete.pristine">
               You need to enter the weeks you estimate to complete the project
             </div>
           </div>
