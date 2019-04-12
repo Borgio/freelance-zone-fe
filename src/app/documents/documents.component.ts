@@ -3,10 +3,11 @@ import { Document } from './document';
 
 @Component({
   selector: 'app-documents',
-  templateUrl: 'documents.component.html'
+  templateUrl: 'documents.component.html',
+  styleUrls: ['documents.component.css']
 })
 export class DocumentsComponent {
-  pageTitle: 'Document Dashboard';
+  pageTitle = 'Document Dashboard';
   documents: Document[] = [
     {
       title: 'first_doc',
