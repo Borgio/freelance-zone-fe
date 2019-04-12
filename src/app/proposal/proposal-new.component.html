@@ -13,10 +13,13 @@
               #customer='ngModel'
               [(ngModel)]="proposal.customer"
       >
+      <div [hidden]="customer.valid || customer.pristine">
+        Customer name is required
+      </div>
     </div>
 
     <div class="form-group">
-      <label for="portfolio_url">Portfolio URL: </label>
+      <label for="portfolio_url">Portfolio URL </label>
       <input type="text"
               class="form-control"
               id="portfolio_url"
@@ -25,10 +28,13 @@
               #portfolio_url='ngModel'
               [(ngModel)]="proposal.portfolio_url"
       >
+      <div [hidden]="portfolio_url.valid || portfolio_url.pristine">
+        A portfolio URL is required
+      </div>
     </div>
 
     <div class="form-group">
-      <label for="tools">Tools that you'll use on the project: </label>
+      <label for="tools">Tools that you'll use on the project </label>
       <input type="text"
               class="form-control"
               id="tools"
@@ -38,6 +44,9 @@
               #tools='ngModel'
               [(ngModel)]="proposal.tools"
       >
+      <div [hidden]="tools.valid || tools.pristine">
+        A list of tools is required
+      </div>
     </div>
 
     <div class="form-group">
@@ -51,6 +60,9 @@
               #estimated_hours='ngModel'
               [(ngModel)]="proposal.estimated_hours"
       >
+      <div [hidden]="estimated_hours.valid || estimated_hours.pristine">
+        An estimation of total hours is required
+      </div>
     </div>
 
     <div class="form-group">
@@ -63,6 +75,9 @@
               #hourly_rate='ngModel'
               [(ngModel)]="proposal.hourly_rate"
       >
+      <div [hidden]="hourly_rate.valid || hourly_rate.pristine">
+        Your hourly rate is required
+      </div>
     </div>
 
     <div class="form-group">
@@ -75,6 +90,9 @@
               #weeks_to_complete='ngModel'
               [(ngModel)]="proposal.weeks_to_complete"
       >
+      <div [hidden]="weeks_to_complete.valid || weeks_to_complete.pristine">
+        You need to enter the weeks you estimate to complete the project
+      </div>
     </div>
 
     <div class="form-group">
@@ -83,7 +101,6 @@
               class="form-control"
               id="client_email"
               placeholder="Client's email address"
-              required
               name="client_email"
               #client_email='ngModel'
               [(ngModel)]="proposal.client_email"

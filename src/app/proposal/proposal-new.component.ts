@@ -6,5 +6,5 @@ import {Proposal } from './proposal';
   templateUrl: 'proposal-new.component.html'
 })
 export class ProposalNewComponent {
-  proposal = new Proposal;
+  proposal = new Proposal();
 }
