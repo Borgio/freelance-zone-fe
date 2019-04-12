@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Proposal } from './proposal';
 
 @Component({
-  selector: 'proposal-list',
+  selector: 'app-proposal-list',
   templateUrl: 'proposal-list.component.html'
 })
 export class ProposalListComponent {

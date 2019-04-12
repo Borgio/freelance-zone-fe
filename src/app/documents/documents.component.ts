@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Document } from './document';
 
 @Component({
-  selector: 'documents',
+  selector: 'app-documents',
   templateUrl: 'documents.component.html'
 })
-export class DocumentsComponent { 
-  pageTitle: string = "Document Dashboard"
+export class DocumentsComponent {
+  pageTitle: 'Document Dashboard';
   documents: Document[] = [
     {
       title: 'first_doc',
