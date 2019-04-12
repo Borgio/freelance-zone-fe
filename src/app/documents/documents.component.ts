@@ -13,21 +13,21 @@ export class DocumentsComponent {
       description: 'first document',
       file_url: 'http://google.com',
       updated_at: '04/10/2019',
-      image_url: 'http://google.com',
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg/800px-Mistakes-to-avoid-when-hiring-freelancers.jpg',
     },
     {
       title: 'second_doc',
       description: 'second document',
       file_url: 'http://google.com',
       updated_at: '04/10/2019',
-      image_url: 'http://google.com',
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg/800px-Mistakes-to-avoid-when-hiring-freelancers.jpg',
     },
     {
       title: 'third_doc',
       description: 'third document',
       file_url: 'http://google.com',
       updated_at: '04/10/2019',
-      image_url: 'http://google.com',
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg/800px-Mistakes-to-avoid-when-hiring-freelancers.jpg',
     }
   ]
 }
