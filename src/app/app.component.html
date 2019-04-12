@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light nav-styles">
   <button class="navbar-toggler ml-auto" type="button"  (click)="navbarText = !navbarText">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -13,7 +13,7 @@
         </li>
         <li class="nav-item dropdown">
           <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-secondary" id="proposalDropdown" ngbDropdownToggle>Proposals</button>
+            <button class="btn btn-outline-primary" id="proposalDropdown" ngbDropdownToggle>Proposals</button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <button ngbDropdownItem routerLink="/proposals" routerLinkActive="active">Proposals List</button>
               <button ngbDropdownItem routerLink="/proposal/new" routerLinkActive="active">New Proposal</button>
