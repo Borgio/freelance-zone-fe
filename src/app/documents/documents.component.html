@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="headline">{{ pageTitle }}</h1>
-  <div class="card" *ngFor="let doc of documents">
+  <div class="card document-card" *ngFor="let doc of documents">
     <img src="{{ doc.image_url }}" class="card-img-top" alt="Card image cap" width="100%">
     <div class="card-body">
       <h5 class="card-title">{{ doc.title }}</h5>
