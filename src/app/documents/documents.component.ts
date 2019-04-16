@@ -1,34 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable, timer } from 'rxjs';
 import { Document } from './document';
+import { DocumentService } from './document.service';
 
 @Component({
   selector: 'app-documents',
   templateUrl: 'documents.component.html',
-  styleUrls: ['documents.component.css']
+  styleUrls: ['documents.component.css'],
+  providers: [ DocumentService ]
 })
-export class DocumentsComponent {
+export class DocumentsComponent implements OnInit {
   pageTitle = 'Document Dashboard';
-  documents: Document[] = [
-    {
-      title: 'first_doc',
-      description: 'first document',
-      file_url: 'http://google.com',
-      updated_at: '04/10/2019',
-      image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg/800px-Mistakes-to-avoid-when-hiring-freelancers.jpg',
-    },
-    {
-      title: 'second_doc',
-      description: 'second document',
-      file_url: 'http://google.com',
-      updated_at: '04/10/2019',
-      image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg/800px-Mistakes-to-avoid-when-hiring-freelancers.jpg',
-    },
-    {
-      title: 'third_doc',
-      description: 'third document',
-      file_url: 'http://google.com',
-      updated_at: '04/10/2019',
-      image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg/800px-Mistakes-to-avoid-when-hiring-freelancers.jpg',
-    }
-  ]
+  documents: Document[];
+  errorMessage: string;
+  mode = 'Observable';
+
+  constructor(
+    private documentService: DocumentService,
+  ) {}
+
+  ngOnInit() {
+    const timer1 = timer(0, 5000);
+    timer1.subscribe(() => this.getDocuments());
+  }
+
+  getDocuments() {
+    this.documentService.getDocuments()
+        .subscribe(
+          documents => this.documents = documents,
+          error => this.errorMessage = this.handleError(error)
+        );
+  }
+
+  private handleError(error: any): string {
+    return error as any;
+  }
 }
