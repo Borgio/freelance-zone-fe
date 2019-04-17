@@ -20,6 +20,15 @@ export class ProposalService {
     return this.http.get(this.proposalsUrl + '/' + id + '.json');
   }
 
+  createProposal(proposal) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.post(this.proposalsUrl, JSON.stringify(proposal), httpOptions).pipe(map((res: HttpResponse<any>) => res));
+  }
+
   private handleError(error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
     let errMsg: string;
