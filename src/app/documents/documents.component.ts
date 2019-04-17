@@ -15,9 +15,7 @@ export class DocumentsComponent implements OnInit {
   errorMessage: string;
   mode = 'Observable';
 
-  constructor(
-    private documentService: DocumentService,
-  ) {}
+  constructor(private documentService: DocumentService) {}
 
   ngOnInit() {
     const timer1 = timer(0, 5000);
