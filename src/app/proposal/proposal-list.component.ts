@@ -17,7 +17,7 @@ export class ProposalListComponent implements OnInit {
   constructor(private proposalService: ProposalService) {}
 
   ngOnInit() {
-    const timer1 = timer(0,5000);
+    const timer1 = timer(0, 5000);
     timer1.subscribe(() => this.getProposals());
   }
 
